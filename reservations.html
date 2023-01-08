@@ -1,0 +1,71 @@
+<html> <!-- Document type declared -->
+<html lang="en"> <!-- Document type with language English defined -->
+
+     <head>
+      <meta charset="UTF-8" />  <!-- Charset attribute specifies the character encoding-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Used to control layout on mobile devices by width of screen -->
+         <title>The Haukai Restaurant - Reservations</title>
+         
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'> 
+		<link href='https://fonts.googleapis.com/css?family=Allison' rel='stylesheet'> 
+		<link href='https://fonts.googleapis.com/css?family=Gelasio' rel='stylesheet'>
+		<link rel='stylesheet' type='text/css' href='../css/default.css'> 
+
+  </head>
+     <body> <!--Start of body section which contains content -->
+     <!-- Here is our main header that is used across all the pages of our website -->
+     <header class="logo">
+      <a href="./index.html"><img src="../images/logo.png" class="logo" alt="Haukai Logo Image" title="Haukai Restaurant Logo"></a> <!-- Defining link to ensure the logo links back to Homepage -->
+    </header>
+        <nav class="topnav" id="mytopnav"> <!-- Navigation section containing nav elements to access each page -->
+          <a href='../index.html'>Home</a> <!-- Defining a hyperlink and creating "active" class indicating the current page -->
+          <a href='./menu/menu.html'>Menu</a>
+          <a class="active" href='./reservations/reservations.html'>Reservations</a> 
+          <a href='../hours/hours.html'>Hours</a>
+          <a href='../about/about.html'>About Us</a>
+          <a href='../contact/contact.html'>Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+      </nav> <!-- Section closed-->
+<!-- Javascript to ensure nav is responsive-->
+        <script>
+          function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+          </script>
+
+     <!-- Here is our page's main content -->
+     <main>
+       <h2>Book a table at The Haukai</h2>
+       <br>
+       <p><b>We only take reservations for dinner service.</b></p>
+       <br>
+       <p>If there are more than 10 in your party please contact us.</p>
+       
+      <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSdbGxQrzGbpXy8HoZD5QnLk8goVlC1F32CTnDs6gcWUMtqwJQ/viewform?embedded=true" >Loading…</iframe>
+              
+     </main>
+    
+     <footer>
+      <div>
+      <a href='../index.html'>Home</a>  <!-- Return to home added for ease of user -->
+      <a href='../policies/privacy.html'>Policies</a>
+      <a href='../contact/contact.html'>Contact us</a>
+        <div class="socials">
+          <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank" ></a>
+        </div>
+      </div>
+    <span class="copyright">&copy; Copyright 2022 by The Haukai Restaurant</span>
+    </footer>
+
+   </body>
+ </html>  
+

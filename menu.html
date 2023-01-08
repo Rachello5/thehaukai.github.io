@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+    <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Haukai Restaurant - Current Menu</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Allison' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Gelasio' rel='stylesheet'>
+		<link rel='stylesheet' type='text/css' href='../css/default.css'>
+    </head>
+	
+    <body>
+		<header class="logo">
+			<a href="../index.html"><img src="../images/logo.png" class="logo" alt="Haukai Logo Image" title="Haukai Restaurant Logo"></a> <!-- Defining link to ensure the logo links back to Homepage -->
+		</header>
+			  <nav class="topnav" id="mytopnav"> 
+				<a href='../index.html'>Home</a> 
+				<a class="active" href='./menu/menu.html'>Menu</a>
+				<a href='../reservations/reservations.html'>Reservations</a> 
+				<a href='../hours/hours.html'>Hours</a>
+				<a href='../about/about.html'>About Us</a>
+				<a href='../contact/contact.html'>Contact</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+				</a>
+			</nav> 
+		<script>
+			function myFunction() {
+			var x = document.getElementById("mytopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+				} else {
+					x.className = "topnav";}
+			}
+		</script>
+
+	<main>
+        <h1>Current Menu</h1>
+    
+	<div class="menu"> <!-- Defined div of "menu" created -->
+			<a href="./appetizers.html">
+			<img src="../images/1.png" alt="The Haukai Restaurant Appetizers Menu" title="Appetizers Menu"></a>
+			<a href="../images/main.PNG" target="_blank">
+			<img src="../images/2.png" alt="The Haukai Restaurant Main Menu" title="Main Menu"></a>
+			<a href="../images/dessert.PNG" target="_blank">
+			<img src="../images/3.png" alt="The Haukai Restaurant Desserts Menu" title="Desserts Menu"></a>
+			<a href="../images/beverages.PNG" target="_blank">
+			<img src="../images/4.png" alt="The Haukai Restaurant Beverages Menu" title="Beverages Menu"></a>
+	</div> <!-- Defined div of "menu" closed -->
+ 
+	<div>
+	<form method="get" action="The Haukai Restaurant Menu.pdf" target="_blank">
+		<button type="submit">Download Full Menu</button>
+	</form>
+ 	</div>
+<br>
+
+</main>
+		
+	 <footer>
+		<div>
+		<a href='../index.html'>Home</a>  <!-- Return to home added for ease of user -->
+		<a href='../policies/privacy.html'>Policies</a>
+		<a href='../contact/contact.html'>Contact us</a>
+		  <div class="socials">
+			<a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+			<a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank" ></a>
+		  </div>
+		</div>
+	  <span class="copyright">&copy; Copyright 2022 by The Haukai Restaurant</span>
+	  </footer>
+	
+    </body>
+ 
+</html>

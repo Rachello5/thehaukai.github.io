@@ -110,7 +110,10 @@ main{padding-top: 20px;}
  .logo /* Style logo in header */
  {padding-left: 10px;
   padding-right: 10px;
- max-width: 100%;}
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+  height: auto;}
 
  .face{
   padding: 10px;  
@@ -148,13 +151,13 @@ padding: 10px;
 
 /* end of footer formatting*/
 
-/* Formatting/styling Images  */  
+/* Formatting/styling Menu Images  */  
   .menu-image /* Adding margin to the gallery class */
   {margin: 10px 40px;
   justify-content: space-evenly;}
   
   .menu-image img /* Format of images in gallery class */
-  {max-width: auto; 
+  {max-width: 50%; 
   height: auto;
   padding: 20px;
   filter: grayscale(80%)}
@@ -174,10 +177,16 @@ padding: 10px;
       text-align: center;
       text-decoration: underline;}
 
-  .interior, .salmon, .dining, .koru 
+  .interior, .koru,.salmon, .dining 
   {opacity: 0.9;
-  padding: 15px;
-  width: 100%;
+  padding: 20px;
+  max-width: 95%;
+  height: auto}
+
+  .salmon, .dining 
+  {opacity: 0.9;
+  padding: 20px;
+  max-width: 75%;
   height: auto}
 
   .mussels, .red, .bread, .icecream{

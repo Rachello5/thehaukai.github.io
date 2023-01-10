@@ -181,7 +181,7 @@ padding: 10px;
       text-align: center;
       text-decoration: underline;}
 
-  .interior, .koru,.salmon, .dining 
+  .interior, .koru
   {opacity: 0.9;
   padding: 20px;
   max-width: 95%;
@@ -190,8 +190,25 @@ padding: 10px;
   .salmon, .dining 
   {opacity: 0.9;
   padding: 20px;
-  max-width: 75%;
+  max-width: 80%;
   height: auto}
+
+/* responsive sizing bases on device*/
+@media screen and (max-width: 800px) {
+  .gallery {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+   flex: 80%;
+    max-width: 100%;
+  }
+}
+/* End of Gallery styling*/
+
 
   .mussels, .red, .bread, .icecream{
   width: 30%;
@@ -275,7 +292,7 @@ padding: 10px;
   display: none;
 }
 
-/* Makes a single column-layout instead of two columns */
+/* Makes a single column-layout instead of two columns reducing size bases on pixels for mulitple devices */
 @media screen and (max-width: 800px) {
   .column {
     flex: 50%;

@@ -220,7 +220,6 @@ padding: 10px;
 
 /* Gallery grid: two equal columns that float next to each other */
 .column {
-  float: left;
   width: 50%;
   padding: 15px;
 }
@@ -239,8 +238,8 @@ padding: 10px;
 /* Makes a single column-layout instead of two columns reducing size bases on pixels for mulitple devices */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 50%;
-    max-width: 50%;
+    flex: 100%;
+    max-width: 90%;
   }
 }
 
@@ -256,7 +255,7 @@ padding: 10px;
     display: inline-block;
     background-color: #2D4A58;
     font-size: 1em;
-    padding: 15px;
+    padding:20px;
     color: #EDE0D4;
     text-align: center;
     text-decoration: underline;}
@@ -287,3 +286,70 @@ padding: 10px;
       height: 100%;
       border: 0; }
   
+/* Menu text only formatting styles*/
+  
+  .menu-page {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 960px;
+    height: 100%;}
+  
+    .menu-item {
+      display: flex;
+      width: 50%;
+      list-style-type: none;
+      padding: 0 1rem;
+      margin: 0 0 1rem;}
+      
+      section {
+        display: flex;
+        flex-direction: column;
+        flex: 1;}
+        
+        header {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;}
+          
+          .spacer {
+            content: '';
+            width: 100%;
+            height: 1px;
+            margin: 0 .5rem;
+            border-bottom: 1px dashed #412814;
+            flex: 1;
+          }
+
+          .beverage-spacer {
+            width: 50%;
+            height: 1px;
+            margin: 0 .5rem;
+            border-bottom: 1px dashed #412814;
+          }         
+
+          .beverages-items{
+            display: flex;
+            width: 50%;
+            padding: 0 1rem;
+            margin: 0 0 1rem;}
+
+        .beverages-list{
+        display: flex;
+        list-style-type: none;
+        text-align: center;
+        display: flex;
+        margin: 20px;}
+
+    .beverage-header{
+        display: flex;
+        margin: 0;}
+
+.menu-title{
+padding-top: 20px;
+}
+
+/* End of menu page formatting*/

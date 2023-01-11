@@ -19,7 +19,7 @@ box-sizing: border-box;}
   
   h2,h3 /* Headline 2/3 formatting/style */
  {color: #412814; 
-  font-family: Arial, Helvetica, sans-serif; /* Font type to display */
+  font-family: Merriweather; /* Font type to display */
   text-align: center;} /* Headline 2 formatting/style */
 
   h4 
@@ -29,8 +29,15 @@ box-sizing: border-box;}
    font-size: 1em;
   margin: 0;} 
 
+  h5 
+  {color: #EDE0D4; 
+   font-family: Merriweather; /* Font type to display */
+   text-transform: uppercase;
+   font-size: 1em;} 
+
   p /* Paragraph */
  {color:#412814;
+ font-family: Arial, Helvetica, sans-serif;
  font-size: 1em; 
  text-align: center;}
 
@@ -76,7 +83,7 @@ main{padding-top: 20px;}
   display: none;
 }
 
-/* Adjustments set to respond to different sized screens */
+/* Adjustments set to respond to different sized viewports */
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -101,11 +108,19 @@ main{padding-top: 20px;}
 }
 
  .logo /* Style logo in header */
- {padding-left: 20px;
- display: flex;
- align-items: left;
- max-width: 100%;}
+ {padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+  height: auto;}
 
+ .face{
+  padding: 10px;  
+  width: 100%;
+  max-width: 600px;
+  height: auto
+ }
 
 /* Footer section formatting/style  */ 
   footer 
@@ -134,71 +149,141 @@ padding-left: 5px;}
 padding: 10px;
 }
 
-/* Formatting/styling Images  */  
-  .menu /* Adding margin to the gallery class */
+.story{
+ margin: 10px; 
+}
+
+/* end of footer formatting*/
+
+/* Formatting/styling Menu Images  */  
+  .menu-image /* Adding margin to the gallery class */
   {margin: 10px 40px;
   justify-content: space-evenly;}
   
-  .menu img /* Format of images in gallery class */
-  {max-width: auto; 
+  .menu-image img /* Format of images in gallery class */
+  {max-width: 50%; 
   height: auto;
   padding: 20px;
   filter: grayscale(80%)}
   
-  .menu img:hover /* Hover effect added, images enlarge and colour returns */
+  .menu-image img:hover /* Hover effect added, images enlarge and colour returns */
   {filter: grayscale(0);
   transform: scale(1.1);
   overflow:hidden;}
 
-  .interior
-  {opacity: 0.9;
-  padding: 15px;
-  width: 100%;
-  height: auto}
-    
-  .dining{
-  width: 350px;
-  height: 400px;
-  padding: 10px;}
+    /* Formatting button on form to download Menu */  
+    .fullmenu {
+      display: inline-block;
+      background-color: #2D4A58;
+      font-size: 1em;
+      padding: 10px;
+      color: #EDE0D4;
+      text-align: center;
+      text-decoration: underline;}
 
+  .interior, .koru
+  {opacity: 0.9;
+  padding: 20px;
+  max-width: 80%;
+  height: auto}
+
+  .salmon, .dining
+  {opacity: 0.9;
+  padding: 20px;
+  max-width: 70%;
+  height: auto}
+
+  .mussels, .red, .bread, .icecream{
+  width: 30%;
+  max-width: 350px;
+  height: auto;
+  padding-bottom: 20px;
+  border-radius: 30%;
+  }
+
+  .bay{
+    width: 50%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px 20px 20px 20px;
+    }
+    
   .owners{  /* Org 5760 x 3840*, resized 490,327*/
   padding: 10px;  
   width: 100%;
   max-width: 600px;
   height: auto}
 
-/* Google Calender */
-  .calendar{
-  border:solid 2px; 
-  border-color: #849ca8;
-  width:100%;
-  max-width: 700px;
-  height: 500px;
-  margin-bottom: 20px;}
-  
- /* Google Map sizing/style */  
-  .map 
-  {width: 500px;
-   height: 350px;
-   padding: 10px;
-   border:0;}
-  
-  /* Formatting button on form to download Menu */  
-   button {
+  /* End of Image styling*/
+
+/* Style the images inside the gallery grid */
+
+/* Gallery grid: two equal columns that float next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Hover effect added, images enlarge and colour returns */
+.column img:hover { 
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.1);
+  overflow:hidden;}
+
+/* Makes a single column-layout instead of two columns reducing size bases on pixels for mulitple devices */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+   flex: 100%;
+  max-width: 90%;
+  }
+}
+/* End of Gallery styling*/
+
+.booknow{
     display: inline-block;
     background-color: #2D4A58;
-    padding: 10px;
-    width: 150px;
+    font-size: 1em;
+    padding: 15px;
     color: #EDE0D4;
     text-align: center;
     text-decoration: underline;}
 
-  .form{ /* org form width="640" height="1549" frameborder="0" marginheight="0" marginwidth="0"*/
-    width: 100%;
-    max-width: 640px;
-    height: 100%;
-    border: 0;
-    }
-
+    /* Google Calender */
+  .calendar{
+    border:solid 2px; 
+    border-color: #849ca8;
+    width:90%;
+    max-width: 700px;
+    height: 500px;
+    margin-bottom: 20px;}
     
-
+   /* Google Map sizing/style */  
+    .map 
+    {max-width: 100%;
+    width: 480px;
+    height: 500px;
+     padding: 10px;
+     border:0;}
+    
+  
+  /* Google Contact form */    
+  
+    .form{ /* org form width="640" height="1549" frameborder="0" marginheight="0" marginwidth="0"*/
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      border: 0; }
+  

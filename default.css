@@ -131,6 +131,19 @@ main {
   height: auto;
 }
 
+@media screen and (max-width: 800px) {
+  .logo {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
 .face {
   padding: 10px;
   width: 100%;
@@ -204,10 +217,19 @@ footer a /* Style/format the links inside footer */ {
   text-decoration: underline;
 }
 
-.interior {
+.interior,
+.koru {
   opacity: 0.9;
   padding: 20px;
   max-width: 80%;
+  height: auto;
+}
+
+.salmon,
+.dining {
+  opacity: 0.9;
+  padding: 20px;
+  max-width: 70%;
   height: auto;
 }
 
@@ -239,17 +261,37 @@ footer a /* Style/format the links inside footer */ {
 
 /* End of Image styling*/
 
+/* Style the images inside the gallery grid */
 
+/* Gallery grid: two equal columns that float next to each other */
+.column {
+  width: 50%;
+  padding: 15px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Hover effect added, images enlarge and colour returns */
+.column img:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+/* Makes a single column-layout instead of two columns reducing size bases on pixels for mulitple devices */
 @media screen and (max-width: 800px) {
-  .interior {
-    position: relative;
+  .column {
+    flex: 100%;
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .interior {
-    position: relative;
+  .column {
+    flex: 100%;
     max-width: 90%;
   }
 }
